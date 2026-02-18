@@ -25,8 +25,7 @@ class ScannerTest extends TestCase
         $app['config']->set('translation.translation_methods', ['__', 'trans', 'trans_choice', '@lang', 'Lang::get']);
     }
 
-    /** @test */
-    public function it_finds_all_translations()
+    public function test_it_finds_all_translations()
     {
         $this->scanner = app()->make(Scanner::class);
         $matches = $this->scanner->findTranslations();
